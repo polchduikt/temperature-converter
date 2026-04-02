@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Temperature Converter"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Input card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorCard"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VALUE"
+                android:textColor="@color/colorLabel"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etTemperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter temperature..."
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextSecondary"
+                android:textSize="20sp"
+                android:inputType="numberDecimal|numberSigned"
+                android:background="@drawable/input_background"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+        </LinearLayout>
+
+        <!-- Conversion direction card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorCard"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONVERSION DIRECTION"
+                android:textColor="@color/colorLabel"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"
+                android:layout_marginBottom="12dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbCelsiusToFahrenheit"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="  Celsius  →  Fahrenheit"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="15sp"
+                    android:checked="true"
+                    android:buttonTint="@color/colorAccent"
+                    android:layout_marginBottom="4dp" />
+
+                <RadioButton
+                    android:id="@+id/rbFahrenheitToCelsius"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="  Fahrenheit  →  Celsius"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="15sp"
+                    android:buttonTint="@color/colorAccent" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/convertorButtun"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="CONVERT"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="14sp"
+            android:letterSpacing="0.1"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Result -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorCard"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RESULT"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="10sp"
+                android:letterSpacing="0.15"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="—"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
